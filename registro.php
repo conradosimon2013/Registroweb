@@ -1,19 +1,13 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Registro</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/main.js?v=<?php echo(rand()); ?>"></script>
-    
-    <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estiloreg.css">
+  <title>Mensaje de Usuario Existente</title>
 </head>
-<body class="registrobody">
-    <div class="registroinfo"><?php
+<body>
+<?php
 
 // Conectamos a la base de datos
 $db = new PDO("mysql:host=localhost;dbname=registros", "root", "");
@@ -29,7 +23,13 @@ $resultado = $db->query($sql);
 
 if ($resultado->fetch()) {
   // El usuario ya existe
-  echo "El usuario ya existe.";
+  echo '<div class="container">
+  <div class="mensaje">
+    <span class="icon">&#10004;</span>
+    <p>¡Error!</p>
+    <p class="descripcion">El usuario ya existe.</p>
+  </div>
+</div>';
 } else {
   // Insertamos los datos en la base de datos
   $sql = "INSERT INTO usuarios (usuario, contraseña, email) VALUES ('$usuario', '$contraseña', '$email')";
@@ -44,6 +44,5 @@ if ($resultado->fetch()) {
     echo "No se pudo registrar al usuario.";
   }
 } ?>
-</div>
 </body>
 </html>
