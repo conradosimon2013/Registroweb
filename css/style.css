@@ -1,0 +1,120 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+    background-color: #535151;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    background-image: url(https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg);
+    background-position: center;
+}
+main {
+    margin-top: 20px;
+}
+.info {
+    font-size: 24px;
+}
+
+.titulo {
+    font-size: 18px;
+}
+
+.grupocv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 300px;
+}
+
+.photo {
+    width: 300px;
+    border-radius: 50%;
+}
+.grupotextocv {
+    margin: auto;
+    padding: 0px 100px;
+    width: 70%;
+}
+
+label,input,.container-reglog {
+   display: flex;
+   width:300px;
+   justify-content: space-between;
+   margin: auto;
+}
+.submit {
+    margin-top: 10px;
+    text-align: center;
+    display: block; 
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+}
+input{
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.container-input {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.fondo {
+    filter: opacity(0.3);
+    position: absolute;
+    width: 100%;
+    z-index: -99;
+    height: 100%;
+    object-fit: cover;
+}
+
+.errorsesion {
+    color: red;
+    display: block;
+   width:300px;
+   margin: auto;
+}
+
+.login {
+    display: block;
+}
+.register {
+    display: none;
+}
+
+.reglog {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: auto 2px;
+    outline: 2px solid rgba(255, 0, 0, 0.4);
+    background-color:rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+.container-reglog {
+    margin-bottom: 20px;
+}
+
+.active {
+    outline: 2px solid rgba(0, 255, 0, 0.4);
+    background-color:rgba(190, 182, 182, 0.534);
+    color: rgb(19, 18, 18);
+}
+
+.registrobody {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://t3.ftcdn.net/jpg/03/03/86/30/360_F_303863027_ih1zUUZTGq7UKq6d0TyX96x4f2C0c7RB.jpg);
+}
