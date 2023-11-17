@@ -24,6 +24,7 @@ main {
 
 .titulo {
     font-size: 18px;
+    flex-grow: 10;
 }
 
 
@@ -107,4 +108,15 @@ input{
 h2 {
     width: 100%;
     text-align: center;
+}
+
+a[href="cerrar.php"] {
+    color: white;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://cdn.icon-icons.com/icons2/368/PNG/512/Logout_37127.png);
+    background-position: center;
+    background-size: contain;
+    
+    
 }

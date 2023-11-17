@@ -6,9 +6,14 @@ if (!isset($_SESSION['usuario'])) {
     header("Location: register.php"); // Redirecciona al inicio de sesión si no ha iniciado sesión
     exit();
 }
-
 // El resto del contenido de tu página protegida va aquí
 ?>
+<?php
+if (!isset($_SESSION['usuario'])) {
+    header("Location: papa.php");
+
+    exit(); }
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -26,7 +31,7 @@ if (!isset($_SESSION['usuario'])) {
     <img src="https://www.plantillaspyme.com/modules/ltw_simpleblog/covers/77.jpg" alt="" class="fondo">
 
     <header> 
-        <h1 class="titulo"><?php echo "Bienvenido, " . $_SESSION['usuario']; ?></h1> <a href="cerrar.php">cerrar</a>
+        <h1 class="titulo"><?php echo "Bienvenido, " . $_SESSION['usuario']; ?></h1> <a href="cerrar.php"></a>
         <div class="info">AnyForm</div>
     </header>
 
