@@ -15,29 +15,15 @@
     <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
 </head>
 <body>
-    <img src="https://www.plantillaspyme.com/modules/ltw_simpleblog/covers/77.jpg" alt="" class="fondo">
+    <img src="https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg" alt="" class="fondo">
 
     <header> 
         <h1 class="titulo">Registro</h1>
         <div class="info">AnyForm</div>
     </header>
     <main>
-        <div class="grupocv">
-            <div>
-                <img class="photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/JoseGalizPErfil.jpg/1024px-JoseGalizPErfil.jpg" alt="">
-         </div>
-            <div class="grupotextocv">
-                <div>
-                    <h3>Conrad Peter</h3>
-                </div>
-
-                <div>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Aut aperiam reprehenderit odit ea ullam itaque nam magnam sit saepe,
-                         corporis ducimus quis explicabo maiores? Voluptate corporis nobis nam sed magnam?</p>
-                </div>
-            </div>
-        </div>
+        <h2>Inicia sesión o registrate para leer las noticias de tu ciudad!</h2>
+       
          <div class="container-input"> 
 
             <div class="container-reglog"><div class="reglog active" id="login">LOGIN</div> <div id="register" class="reglog">REGISTRARSE</div></div>
