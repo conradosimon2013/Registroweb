@@ -1,23 +1,41 @@
-<a href="#" id="openForm">Abrir Formulario</a>
+<a href="#" id="openForm" onclick="setFechaActual()">Nueva noticia</a>
 
 <div id="formPopup">
-    <form action="procesar.php" method="post" enctype="multipart/form-data">
-        <label for="titulo">Título:</label>
-        <input type="text" name="titulo" required>
-
-        <label for="encabezado">Encabezado:</label>
-        <textarea name="encabezado" required></textarea>
-
-        <label for="imagen">Imagen:</label>
-        <input type="file" name="imagen" accept="image/*">
-
-        <input type="submit" value="Guardar">
+    <form action="include/procesar_noticia.php" method="post">
+    <label for="nombre">Titulo:</label>
+    <input type="text" name="titulo" required>
+    <label for="noticia">Noticia:</label>
+    <textarea name="noticia" id="noticia" cols="30" rows="10" required></textarea>
+    <label for="autor">Autor:</label>
+    <input type="text" name="autor" id="autor">
+    <label for="fecha">Fecha:</label>
+    <input type="date" name="fecha" id="fecha">
+    <input type="submit" name="submit" id="submit">
     </form>
     <a href="#" id="closeForm">Cerrar Formulario</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="script.js"></script>
+<script>$(document).ready(function () {
+    $("#openForm").click(function () {
+        $("#formPopup").fadeIn();
+    });
+
+    $("#closeForm").click(function () {
+        $("#formPopup").fadeOut();
+    });
+});
+
+function setFechaActual() {
+            // Obtener la fecha actual en formato YYYY-MM-DD
+            var fechaActual = new Date().toISOString().split('T')[0];
+
+            // Establecer la fecha actual en el campo de entrada
+            document.getElementById('fecha').value = fechaActual;
+        }
+
+</script>
 
 <STYLE>
     #formPopup {
@@ -26,17 +44,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 22px;
     background-color: #fff;
     border: 1px solid #ccc;
     z-index: 1000;
+    font-size:10px;
 }
 
 #formPopup label,
 #formPopup input,
 #formPopup textarea {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    width: 90vw;
 }
 
 #formPopup a {

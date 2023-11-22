@@ -1,25 +1,13 @@
+
+
+
 <?php
 // Procesar el formulario y guardar la noticia en la base de datos
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $fecha = $_POST["fecha"];
-    $categoria = $_POST["categoria"];
     $titulo = $_POST["titulo"];
-    $encabezado = $_POST["encabezado"];
-
-    $imagen_nombre = $_FILES["imagen"]["name"];
-    $ruta_destino = __DIR__ . "/img/" . $imagen_nombre;
-
-
-if (file_exists($ruta_destino)) {
-    echo "El archivo ya existe.";
-} else {
-    if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta_destino)) {
-        echo "Noticia creada con éxito.";
-    } else {
-        echo "Error al mover el archivo.";
-    }
-}
+    $noticia = $_POST["noticia"];
+    $autor = $_POST["autor"];
+    $fecha = $_POST["fecha"];
     $servername = "localhost";  // Cambia esto si tu base de datos no está en el mismo servidor
     $username = "root";
     $password = "";
@@ -32,7 +20,7 @@ if (file_exists($ruta_destino)) {
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO noticias (fecha_creacion, categoria, titulo, encabezado) VALUES ('$fecha', '$categoria', '$titulo', '$encabezado')";
+    $sql = "INSERT INTO noticias (titulo, noticia, autor, fecha) VALUES ('$titulo', '$noticia', '$autor', '$fecha')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Noticia creada con éxito.";
@@ -41,5 +29,8 @@ if (file_exists($ruta_destino)) {
     }
 
     $conn->close();
+    header("location: ../inicio.php");
+}else {
+    echo "ERROR EN LA INSERSION DE DATOS XD";
 }
 ?>
