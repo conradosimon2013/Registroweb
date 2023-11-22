@@ -8,6 +8,8 @@
         header('Location: inicio.php');
         exit();
     }
+
+        
     
  ?>
 
@@ -19,18 +21,14 @@
     <title>Registro</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/main.js?v=<?php echo(rand()); ?>"></script>
     
-    <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
 </head>
 <body>
-    <img src="https://t4.ftcdn.net/jpg/05/34/87/15/360_F_534871551_MOmx3mu3oP1TkmUW8ZDffLpHrv86LLrE.jpg" alt="" class="fondo">
+    <?php include 'include/header.php' ?>
+    
+    <img src="https://us.123rf.com/450wm/mpfphotography/mpfphotography1405/mpfphotography140500014/28138648-noticias-de-la-palabra-nube-de-etiquetas-vector-textura-de-fondo.jpg?ver=6" alt="" class="fondo">
 
-    <header> 
-        <h1 class="titulo">Registro</h1>
-        <div class="info">AnyForm</div>
-    </header>
+    
     <main>
         <h2>Inicia sesión o registrate para leer las noticias de tu ciudad!</h2>
        

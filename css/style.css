@@ -4,16 +4,7 @@
 	box-sizing: border-box;
 }
 
-header {
-    background-color: #535151;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 18px;
-    background-image: url(https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg);
-    background-position: center;
-}
+
 main {
     margin-top: 20px;
     display: ;
@@ -85,9 +76,10 @@ input{
     text-align: center;
     margin: auto 2px;
     outline: 2px solid rgba(255, 0, 0, 0.4);
-    background-color:rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color:rgba(190, 182, 182, 0.534);
+    color: rgb(19, 18, 18);
     cursor: pointer;
+    opacity: .5;
 }
 .container-reglog {
     margin-bottom: 20px;
@@ -95,8 +87,9 @@ input{
 
 .active {
     outline: 2px solid rgba(0, 255, 0, 0.4);
-    background-color:rgba(190, 182, 182, 0.534);
-    color: rgb(19, 18, 18);
+    background-color:rgba(13, 51, 16, 0.815);
+    color: rgb(255, 255, 255);
+    opacity: 1;
 }
 
 .registrobody {
@@ -110,13 +103,13 @@ h2 {
     text-align: center;
 }
 
-a[href="cerrar.php"] {
+a[href="c"] {
     color: white;
     width: 20px;
     height: 20px;
     background-image: url(https://cdn.icon-icons.com/icons2/368/PNG/512/Logout_37127.png);
     background-position: center;
     background-size: contain;
-    
+    margin: auto;
     
 }

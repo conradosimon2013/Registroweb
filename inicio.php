@@ -14,7 +14,6 @@ if (!isset($_SESSION['usuario'])) {
 
     exit(); }
  ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,12 +27,14 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
+<?php
+include 'include/header.php';
+?>
     <img src="https://www.plantillaspyme.com/modules/ltw_simpleblog/covers/77.jpg" alt="" class="fondo">
 
-    <header> 
-        <h1 class="titulo"><?php echo "Bienvenido, " . $_SESSION['usuario']; ?></h1> <a href="cerrar.php"></a>
-        <div class="info">AnyForm</div>
-    </header>
+    
+         
+      
 
 </body>
 </html>

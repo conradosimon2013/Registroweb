@@ -7,6 +7,10 @@
   <title>Mensaje de Usuario Existente</title>
 </head>
 <body>
+  <?php
+include 'include/header.php';
+?>
+
 <?php
 
 // Conectamos a la base de datos
