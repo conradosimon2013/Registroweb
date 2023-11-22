@@ -8,12 +8,7 @@ if (!isset($_SESSION['usuario'])) {
 }
 // El resto del contenido de tu página protegida va aquí
 ?>
-<?php
-if (!isset($_SESSION['usuario'])) {
-    header("Location: papa.php");
 
-    exit(); }
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +29,7 @@ include 'include/header.php';
 
 <main class="mein">
 <div class="principal">
+    <?php include 'include/noticias.php'; ?>
 
 </div>
 <aside>

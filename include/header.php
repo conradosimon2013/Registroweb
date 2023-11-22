@@ -70,6 +70,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="scripts/main.js?v=<?php echo(rand()); ?>"></script>
     <link rel="stylesheet" href="css/style.css?v=<?php echo(rand()); ?>" />
 </head>
@@ -86,7 +88,7 @@
 
             if (isset($_SESSION['usuario'])) {
                 if (($_SESSION['usuario'] == 'conrado2011')){
-                    echo '<a href="cerrar.php"> Nueva noticia</a>';
+                    include 'include/newnoticia.php';
                 }
              echo "Bienvenido, " . $_SESSION['usuario'];
             }

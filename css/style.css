@@ -115,13 +115,12 @@ a[href="c"] {
 .principal {
     background-color: red;
     flex-basis: 80%;
-    height: 400px;
 }
 
 aside {
     background-color: blue;
     flex-basis: 20%;
-    height: 400px;
+    height: auto;
 }
 
 footer {
