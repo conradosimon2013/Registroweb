@@ -5,10 +5,6 @@
 }
 
 
-main {
-    margin-top: 20px;
-    display: ;
-}
 .info {
     font-size: 24px;
 }
@@ -112,4 +108,24 @@ a[href="c"] {
     background-size: contain;
     margin: auto;
     
+}
+.mein {
+    display: flex;
+}
+.principal {
+    background-color: red;
+    flex-basis: 80%;
+    height: 400px;
+}
+
+aside {
+    background-color: blue;
+    flex-basis: 20%;
+    height: 400px;
+}
+
+footer {
+    height: 200px;
+    background-color: aqua;
+    width: 100%;
 }

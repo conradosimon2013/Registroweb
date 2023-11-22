@@ -80,7 +80,14 @@
         <a href="#">Inicio</a>
         <a href="#">Acerca de</a>
         <span class=""><?php
+
+            
+
+
             if (isset($_SESSION['usuario'])) {
+                if (($_SESSION['usuario'] == 'conrado2011')){
+                    echo '<a href="cerrar.php"> Nueva noticia</a>';
+                }
              echo "Bienvenido, " . $_SESSION['usuario'];
             }
             ?> 

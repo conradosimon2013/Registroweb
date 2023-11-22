@@ -32,7 +32,17 @@ include 'include/header.php';
 ?>
     <img src="https://www.plantillaspyme.com/modules/ltw_simpleblog/covers/77.jpg" alt="" class="fondo">
 
-    
+<main class="mein">
+<div class="principal">
+
+</div>
+<aside>
+
+</aside>
+</main>
+    <footer>
+
+    </footer>
          
       
 
