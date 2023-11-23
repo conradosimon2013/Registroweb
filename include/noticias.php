@@ -1,17 +1,5 @@
 <?php
-// Establecer la conexión a la base de datos (reemplaza con tus propios datos)
-$servername = "localhost";  // Cambia esto si tu base de datos no está en el mismo servidor
-$username = "root";
-$password = "";
-$dbname = "registros";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
+include "config.php";
 // Consultar la base de datos para obtener las noticias
 $sql = "SELECT id, titulo, noticia, autor, fecha FROM noticias";
 $result = $conn->query($sql);
@@ -19,9 +7,16 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Mostrar los datos de cada noticia
     while($row = $result->fetch_assoc()) {
+        setlocale(LC_TIME, 'es_ES');
+        $fechabuena = strftime('%e de %B de %Y', strtotime($row["fecha"]));
         echo "<h2>" . $row["titulo"] . "</h2>";
-        echo "<p><strong>Fecha de Creación:</strong> " . $row["fecha"] . "</p>";
-        echo "<p><strong>Encabezado:</strong> " . $row["noticia"] . "</p>";
+        echo "<p> " . $fechabuena . "</p>";
+        
+        echo "<p> " . $row["noticia"] . "</p>";
+        if (isset($_SESSION['usuario'])) {
+            if (($_SESSION['usuario'] == 'conrado2011')){
+                echo '<a href="eliminar_elemento.php?id=' . $row["id"] . '">Eliminar</a>';
+             };};
         echo "<hr>"; 
     }
 } else {

@@ -43,20 +43,8 @@
                 <input type="text" required name="usuario" id="usuario" placeholder="Nombre">
                 <label for="">Contraseña</label>
                 <input type="password" required name="contraseña" id="contraseña" placeholder="Contraseña">
-                <?php
-               
-    $servername = "localhost";  // Cambia esto si tu base de datos no está en el mismo servidor
-    $username = "root";
-    $password = "";
-    $dbname = "registros";
-    
-    // Crea la conexión
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    
-    // Verifica la conexión
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+ <?php
+    include "include/config.php";
     // Tu código de conexión a la base de datos aquí
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

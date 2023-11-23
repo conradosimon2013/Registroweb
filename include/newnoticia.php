@@ -6,6 +6,8 @@
     <input type="text" name="titulo" required>
     <label for="noticia">Noticia:</label>
     <textarea name="noticia" id="noticia" cols="30" rows="10" required></textarea>
+    <label for="imagen">Selecciona una imagen:</label>
+    <input type="file" name="imagen" id="imagen" accept="image/*">
     <label for="autor">Autor:</label>
     <input type="text" name="autor" id="autor">
     <label for="fecha">Fecha:</label>

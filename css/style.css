@@ -115,6 +115,7 @@ a[href="c"] {
 .principal {
     background-color: red;
     flex-basis: 80%;
+    min-height: 80vh;
 }
 
 aside {

@@ -1,4 +1,5 @@
 <?php
+
 session_start(); // Asegúrate de iniciar la sesión al principio del archivo
 
 // Verifica si la variable de sesión está establecida
